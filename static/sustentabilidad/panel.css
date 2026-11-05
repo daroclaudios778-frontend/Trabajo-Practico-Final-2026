@@ -1,0 +1,422 @@
+:root {
+    color-scheme: light;
+    font-family: 'Segoe UI', sans-serif;
+    color: #1c2b22;
+    background: #f4f7f2;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-optical-sizing: auto;
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.page-shell {
+    min-height: 100vh;
+}
+
+.topbar {
+    display: flex;
+    height: 72px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 max(6vw, calc((100vw - 1120px) / 2));
+    border-bottom: 1px solid #e8eee6;
+    background: #62d44a;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #1c2b22;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 19px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.brand-mark {
+    display: grid;
+    width: 34px;
+    height: 34px;
+    place-items: center;
+    border-radius: 11px;
+    background: #1f714a;
+    color: #fff;
+    font-size: 17px;
+}
+
+.brand-accent {
+    color: #34845b;
+}
+
+.eyebrow {
+    color: #839087;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.environment-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 6px 12px 6px 7px;
+    border: 1px solid rgb(255 255 255 / 55%);
+    border-radius: 999px;
+    background: rgb(255 255 255 / 78%);
+    color: #245c39;
+}
+
+.environment-mark {
+    display: grid;
+    width: 30px;
+    height: 30px;
+    place-items: center;
+    border-radius: 50%;
+    background: #e4f4df;
+}
+
+.environment-mark svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: #287346;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+}
+
+.environment-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.dashboard {
+    width: min(100% - 40px, 1050px);
+    margin: 0 auto;
+    padding: 54px 0 32px;
+}
+
+.page-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.eyebrow {
+    margin: 0 0 9px;
+    color: #42815b;
+}
+
+h1,
+h2,
+p {
+    margin-top: 0;
+}
+
+h1,
+h2,
+.metric-value {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+h1 {
+    margin-bottom: 8px;
+    font-size: clamp(26px, 4vw, 34px);
+    letter-spacing: -1.3px;
+}
+
+.page-description {
+    margin-bottom: 0;
+    color: #77837b;
+    font-size: 14px;
+}
+
+.status-pill {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 13px;
+    border: 1px solid #dcebe0;
+    border-radius: 999px;
+    background: #f0f8f2;
+    color: #39714e;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #48a66a;
+    box-shadow: 0 0 0 3px #dcefe1;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.metric-card,
+.consumption-card {
+    border: 1px solid #33a20e;
+    border-radius: 15px;
+    background: #e3f2cd;
+    box-shadow: 0 5px 18px rgb(34 58 40 / 3%);
+}
+
+.metric-card {
+    min-height: 174px;
+    padding: 21px 22px;
+}
+
+.emissions-card {
+    border-top: 3px solid #39845a;
+    padding-top: 19px;
+}
+
+.metric-topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.metric-label {
+    color: #6f7d73;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.metric-icon {
+    display: grid;
+    width: 34px;
+    height: 34px;
+    place-items: center;
+    border-radius: 10px;
+    background: #f0f6f1;
+    color: #36734e;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.energy-icon {
+    background: #f2f5e9;
+    color: #7a8c3d;
+    font-size: 20px;
+}
+
+.plant-icon {
+    background: #f5f0e8;
+    color: #a17b3d;
+    font-size: 18px;
+}
+
+.metric-value {
+    margin: 17px 0 5px;
+    font-size: clamp(25px, 3vw, 32px);
+    font-weight: 700;
+    letter-spacing: -1.2px;
+}
+
+.metric-value span {
+    color: #7e8b81;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+.metric-value-name {
+    overflow: hidden;
+    font-size: clamp(19px, 2.4vw, 25px);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.metric-note {
+    margin-bottom: 0;
+    color: #0e5f16;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.consumption-card {
+    padding: 25px 27px 12px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #edf0ec;
+}
+
+h2 {
+    margin-bottom: 0;
+    font-size: 18px;
+    letter-spacing: -0.5px;
+}
+
+.section-heading .eyebrow {
+    margin-bottom: 6px;
+    font-size: 9px;
+}
+
+.unit-label {
+    padding: 6px 9px;
+    border-radius: 6px;
+    background: #f5f7f4;
+    color: #77837b;
+    font-size: 10px;
+}
+
+.plant-row {
+    padding: 17px 0;
+    border-bottom: 1px solid #f0f2ef;
+}
+
+.plant-row:last-child {
+    border-bottom: 0;
+}
+
+.plant-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 10px;
+}
+
+.plant-name {
+    color: #35453a;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.plant-consumption {
+    color: #33463a;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.plant-consumption span {
+    color: #8a968d;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.progress-track {
+    height: 7px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #edf2ed;
+}
+
+.progress-bar {
+    display: block;
+    height: 100%;
+    min-width: 3px;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #70b987, #1fe982);
+    transition: width 350ms ease;
+}
+
+.empty-state {
+    margin: 0;
+    padding: 25px 0;
+    color: #7e8b81;
+    font-size: 13px;
+    text-align: center;
+}
+
+.footer-note {
+    padding-top: 22px;
+    color: #929e95;
+    font-size: 11px;
+    text-align: center;
+}
+
+.footer-note span {
+    padding: 0 4px;
+    color: #68a17a;
+}
+
+@media (max-width: 700px) {
+    .topbar {
+        height: 62px;
+        padding: 0 20px;
+    }
+
+    .environment-brand {
+        gap: 7px;
+        padding-right: 9px;
+    }
+
+    .environment-label {
+        font-size: 9px;
+        letter-spacing: 0.6px;
+    }
+
+    .dashboard {
+        width: min(100% - 32px, 500px);
+        padding-top: 36px;
+    }
+
+    .page-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .metrics-grid {
+        grid-template-columns: 1fr;
+        gap: 11px;
+    }
+
+    .metric-card {
+        min-height: 0;
+        padding: 17px 19px;
+    }
+
+    .emissions-card {
+        padding-top: 15px;
+    }
+
+    .metric-value {
+        margin-top: 12px;
+    }
+
+    .consumption-card {
+        padding: 21px 19px 8px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
